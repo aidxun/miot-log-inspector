@@ -430,7 +430,7 @@ async function getActiveTab(): Promise<chrome.tabs.Tab | undefined> {
 }
 
 function isSupportedUrl(url: string | undefined): boolean {
-  return Boolean(url?.startsWith("https://iot.mi.com/") || url?.startsWith("file://"));
+  return Boolean(url?.startsWith("https://iot.mi.com/"));
 }
 
 async function extractLogsFromTab(tabId: number): Promise<ExtractLogsResponse> {
