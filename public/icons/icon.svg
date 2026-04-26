@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="MIoT Log Inspector">
+  <defs>
+    <linearGradient id="bg" x1="2" y1="2" x2="126" y2="126" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="126" height="126" rx="28" fill="url(#bg)"/>
+  <rect x="13" y="15" width="102" height="98" rx="16" fill="#f8fafc" opacity="0.96"/>
+
+  <path d="M45 39c-9 0-13 5-13 13v6c0 4-3 7-8 7 5 0 8 3 8 7v6c0 8 4 13 13 13" fill="none" stroke="#0f766e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M77 39c9 0 13 5 13 13v6c0 4 3 7 8 7-5 0-8 3-8 7v6c0 8-4 13-13 13" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="50" y="42" width="20" height="7" rx="3.5" fill="#64748b"/>
+  <rect x="50" y="61" width="31" height="7" rx="3.5" fill="#f59e0b"/>
+  <rect x="50" y="80" width="20" height="7" rx="3.5" fill="#64748b"/>
+
+  <circle cx="94" cy="94" r="14" fill="#111827" opacity="0.9"/>
+  <circle cx="92" cy="92" r="5.8" fill="none" stroke="#e5eefb" stroke-width="2.6"/>
+  <path d="M96 96l6.5 6.5" stroke="#e5eefb" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
