@@ -6,7 +6,7 @@ Chrome Manifest V3 extension for inspecting full JSON messages in `iot.mi.com` M
 
 - Opens as a Chrome Side Panel.
 - Reads `.device-log-main-log` rows from `https://iot.mi.com/*`.
-- Also supports local `file://` pages for testing with the provided `logpage.html`.
+- Also supports local `file://` pages for testing with exported or saved log pages.
 - Extracts time, message type, and full message JSON from `.multiLineHide[title]`.
 - Expands nested JSON strings before display and search.
 - Shows the extracted log list in the Side Panel while keeping the original page table as the source of truth.
@@ -31,10 +31,14 @@ npm run build
 
 Load the generated `dist/` directory from `chrome://extensions` with Developer Mode enabled.
 
-If you test with local `logpage.html`, enable **Allow access to file URLs** for this extension in `chrome://extensions`.
+If you test with a local saved log page, enable **Allow access to file URLs** for this extension in `chrome://extensions`.
 
 ## Notes
 
 - Chrome 114+ is required for the Side Panel API.
 - The extension is intentionally scoped to `https://iot.mi.com/*`.
 - Log data is processed locally in the browser and is not uploaded or stored remotely.
+
+## License
+
+Apache License 2.0. See [LICENSE](LICENSE).
