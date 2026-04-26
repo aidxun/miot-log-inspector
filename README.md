@@ -30,6 +30,10 @@ npm run build
 
 Load the generated `dist/` directory from `chrome://extensions` with Developer Mode enabled.
 
+## Store Screenshots
+
+After loading `dist/` locally, open `chrome-extension://<extension-id>/sidepanel.html?demo=1` to use screenshot mock data. The demo mode is only activated by this URL parameter and does not change the normal `iot.mi.com` page flow.
+
 ## Notes
 
 - Chrome 114+ is required for the Side Panel API.

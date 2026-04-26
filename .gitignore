@@ -9,6 +9,7 @@ dist/
 
 # Local tooling
 .superpowers/
+.tmp-chrome-screenshots/
 
 # Logs
 *.log

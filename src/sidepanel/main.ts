@@ -1,5 +1,6 @@
 import "./styles.css";
 import { formatRowsAsMarkdown } from "./copy";
+import { createDemoLogTable } from "./demoData";
 import { shouldDeferSearchRender } from "./inputComposition";
 import { renderJsonWithStructuredMatches } from "./jsonRenderer";
 import { prettyPrintJson } from "../shared/json";
@@ -41,6 +42,7 @@ if (!appElement) {
 }
 
 const app = appElement;
+const isDemoMode = new URLSearchParams(window.location.search).get("demo") === "1";
 
 const state: AppState = {
   rows: [],
@@ -60,6 +62,20 @@ render();
 void refreshRows();
 
 async function refreshRows(): Promise<void> {
+  if (isDemoMode) {
+    const response = createDemoLogTable();
+
+    state.rows = response.rows;
+    state.searchIndex = createSearchIndex(response.rows);
+    state.tableHeaders = response.headers;
+    state.detailDrawerRowId = null;
+    state.selectedRowIds.clear();
+    state.status = "演示模式：已加载 Chrome Web Store 截图用 mock 日志";
+    state.copyStatus = "";
+    render();
+    return;
+  }
+
   state.status = "读取当前页面...";
   render();
 
